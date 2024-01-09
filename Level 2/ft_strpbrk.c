@@ -1,37 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strpbrk.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/08 19:02:57 by anamieta          #+#    #+#             */
-/*   Updated: 2024/01/09 13:30:04 by anamieta         ###   ########.fr       */
+/*   Created: 2024/01/09 14:02:16 by anamieta          #+#    #+#             */
+/*   Updated: 2024/01/09 14:26:14 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
 
-int    ft_strcmp(char *s1, char *s2)
+char	*ft_strpbrk(const char *s1, const char *s2)
 {
     int i = 0;
-    while (*s1 && *s2)
+    int j = 0;
+    while (s1[i])
     {
-        if (s1[i] != s2[i])
-            return (s1[i] - s2[i]);
-        else if (s1[i] == s2[i])
-            i++;
+        j = 0;
+        while (s2[j])
+        {
+            if (s1[i] == s2[j])
+                return ((char *)&s1[i]);
+            j++;
+        }
+        i++;
     }
-    return (s1[i] - s2[i]);
+    return (NULL);
 }
 
 int main(void)
 {
-    char s1[] = "Chakalak";
-    char s2[] = "Chakalaka";
-    int myfunction = ft_strcmp(s1, s2);
-    int deffun = strcmp(s1, s2);
-    printf("My function: %d\nDefault function: %d\n", myfunction, deffun);
+    char str[] = "To je stryng";
+    char charset[] = "Abcd";
+    char *myfun = ft_strpbrk(str, charset);
+    char *deffun = strpbrk(str, charset);
+    printf("My function: %s\nDefault function: %s\n", myfun, deffun);
     return 0;
 }

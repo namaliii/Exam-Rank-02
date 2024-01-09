@@ -1,37 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/08 19:02:57 by anamieta          #+#    #+#             */
-/*   Updated: 2024/01/09 13:30:04 by anamieta         ###   ########.fr       */
+/*   Created: 2024/01/09 14:28:13 by anamieta          #+#    #+#             */
+/*   Updated: 2024/01/09 14:40:03 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include <stdio.h>
 
-int    ft_strcmp(char *s1, char *s2)
+char    *ft_strrev(char *str)
 {
     int i = 0;
-    while (*s1 && *s2)
+    int length = 0;
+    char temp;
+    while (str[length])
     {
-        if (s1[i] != s2[i])
-            return (s1[i] - s2[i]);
-        else if (s1[i] == s2[i])
-            i++;
+        length++;
     }
-    return (s1[i] - s2[i]);
+    while (i < length / 2)
+    {
+        temp = str[i];
+        str[i] = str[length - 1 - i];
+        str[length - 1 - i] = temp;
+        i++;
+    }
+    return ((char *)str);
 }
 
 int main(void)
 {
-    char s1[] = "Chakalak";
-    char s2[] = "Chakalaka";
-    int myfunction = ft_strcmp(s1, s2);
-    int deffun = strcmp(s1, s2);
-    printf("My function: %d\nDefault function: %d\n", myfunction, deffun);
+    char str[] = "Proba generalna";
+    char *reversed = ft_strrev(str);
+    printf("Reversed string: %s\n", reversed);
     return 0;
 }
