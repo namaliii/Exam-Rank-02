@@ -6,13 +6,12 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 18:12:12 by anamieta          #+#    #+#             */
-/*   Updated: 2024/01/30 18:33:25 by anamieta         ###   ########.fr       */
+/*   Updated: 2024/01/30 18:39:29 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <limits.h>
 
 char *ft_itoa(int n)
 {
