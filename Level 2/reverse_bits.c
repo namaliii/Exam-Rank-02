@@ -6,29 +6,20 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 13:29:09 by anamieta          #+#    #+#             */
-/*   Updated: 2024/01/25 18:22:33 by anamieta         ###   ########.fr       */
+/*   Updated: 2024/01/31 17:37:54 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-
-void reverse_byte(unsigned char octet)
+unsigned char	reverse_bits(unsigned char octet)
 {
-	int	i = 0;
-	unsigned char 	bit;
+	int		i = 8;
+	unsigned char	res = 0;
 
-	while (i < 8)
+	while (i > 0)
 	{
-		bit = (octet >> i & 1) + '0';
-		write(1, &bit, 1);
-        i++;
+		res = res * 2 + (octet % 2);
+		octet = octet / 2;
+		i--;
 	}
-}
-
-int main(void)
-{
-    unsigned char octet = 38;
-    reverse_byte(octet);
-    return 0;
+	return (res);
 }
