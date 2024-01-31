@@ -6,11 +6,11 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 20:34:24 by anamieta          #+#    #+#             */
-/*   Updated: 2024/01/30 20:14:39 by anamieta         ###   ########.fr       */
+/*   Updated: 2024/01/31 19:45:08 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "list.h"
+#include "sort_list.h"
 #include <stdlib.h>
 
 t_list *sort_list(t_list* lst, int (*cmp)(int, int))
