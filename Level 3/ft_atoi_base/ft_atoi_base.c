@@ -6,7 +6,7 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 19:13:33 by anamieta          #+#    #+#             */
-/*   Updated: 2024/02/02 19:39:14 by anamieta         ###   ########.fr       */
+/*   Updated: 2024/02/07 20:04:45 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int ft_atoi_base(const char *str, int str_base)
     int sign = 1;
     int i = 0;
     
-    while (str[i] == '-')
+    if (str[i] == '-')
     {
         sign = -1;
         i++;
