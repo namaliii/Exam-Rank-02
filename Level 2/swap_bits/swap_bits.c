@@ -6,7 +6,7 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 18:15:41 by anamieta          #+#    #+#             */
-/*   Updated: 2024/02/02 18:21:25 by anamieta         ###   ########.fr       */
+/*   Updated: 2024/02/07 17:23:24 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,4 +14,3 @@ unsigned char	swap_bits(unsigned char octet)
 {
     return ((octet >> 4) | (octet << 4));
 }
-

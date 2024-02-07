@@ -6,7 +6,7 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 13:06:00 by anamieta          #+#    #+#             */
-/*   Updated: 2024/01/25 13:21:27 by anamieta         ###   ########.fr       */
+/*   Updated: 2024/02/07 17:02:37 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,3 @@ int main(void)
     printf("Maximum value in this array is: %d\n", maximum);
     return 0;
 }
-

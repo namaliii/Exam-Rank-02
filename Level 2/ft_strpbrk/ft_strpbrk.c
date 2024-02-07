@@ -6,7 +6,7 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 14:02:16 by anamieta          #+#    #+#             */
-/*   Updated: 2024/01/09 14:26:14 by anamieta         ###   ########.fr       */
+/*   Updated: 2024/02/07 15:33:07 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,3 +40,4 @@ int main(void)
     printf("My function: %s\nDefault function: %s\n", myfun, deffun);
     return 0;
 }
+

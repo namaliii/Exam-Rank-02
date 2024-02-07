@@ -6,7 +6,7 @@
 /*   By: anamieta <anamieta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 18:42:24 by anamieta          #+#    #+#             */
-/*   Updated: 2024/02/02 19:01:13 by anamieta         ###   ########.fr       */
+/*   Updated: 2024/02/07 17:55:54 by anamieta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,24 +16,18 @@ int main(int argc, char **argv)
 {
     int i = 0;
     int j = 0;
-    char *s1 = argv[1];
-    char *s2 = argv[2];
+
     if (argc == 3)
     {
-        while (s1[i])
-        {
-            j = 0;
-            while (s2[j])
-            {
-                if (s1[i] == s2[j])
-                {
-                    write(1, &s1[i], 1);
-                    break ;
-                }
-                else
-                    j++;
-            }
-            i++;
+        while (argv[2][j])
+        {    
+            if (argv[2][j] == argv[1][i])
+                i++;
+            j++;
         }
+        if (!argv[1][i])
+                write(1, argv[1], i);
     }
+    write(1, "\n", 1);
+    return 0;
 }
